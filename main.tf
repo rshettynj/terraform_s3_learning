@@ -1,11 +1,12 @@
 locals {
-  mylocalbucket1 = "rshetty-serverless-artifacts-900-00001"
-  mylocalbucket2 = "rshetty-serverless-artifacts-900-00002"
+  mylocalbucket1 = "rshetty-serverless-artifacts-900-ohio"
+  mylocalbucket2 = "rshetty-serverless-artifacts-900-va"
 }
 
 #myregion comes from root module variables.tf file
 provider "aws" {
   region     = var.myregion
+  version    = "~> 2.60"
 }
 
 #mybucket1 and mybucket2 comes from root module local definition above
